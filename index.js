@@ -2,25 +2,25 @@ console.log("Desafio DIO")
 
 console.log("Desafio 2 - Calculadora de Partidas")
 let win = 100;
-let lost = 85;
+let lost = 2;
 let saldoVitorias = win - lost
 
 // Categorias de ranking e saldos mínimos necessários para cada uma
 const nivel = ["Ferro", "Bronze", "Prata", "Ouro", "Diamante", "Lendário", "Imortal"];
 const saldoMinimo = [0, 11, 21, 51, 81, 91, 101, 100000]; // saldo mínimo de vitórias para cada categoria
-let categoria = nivel[0];
+let categoriaNivel = nivel[0];
 
 calcularPartidas() //chamada da função
 //Definição do escopo da função
 function calcularPartidas (){
 	for (let i = 0; i < saldoMinimo.length; i++) {
     	if (saldoVitorias >= saldoMinimo[i]) {
-        categoria = nivel[i];
+        categoriaNivel = nivel[i];
     	} else {
      	   break; // Para o loop assim que a categoria correta é encontrada
     	}
 	}
-    console.log(`O Herói tem saldo de ${saldoVitorias} está no nível de ${categoria}`);
+    console.log(`O Herói tem saldo de ${saldoVitorias} está no nível de ${categoriaNivel}`);
 }
 
 console.log("Desafio 1 - Ranking")
