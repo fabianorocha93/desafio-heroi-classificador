@@ -1,5 +1,40 @@
 console.log("Desafio DIO")
 
+console.log("Desafio 3 - Escrevendo as Classes de Um Jogo")
+
+class attackHero {
+    constructor(nome, idade, typeHero, typeAttack) {
+        this.name = nome;
+        this.age = idade;
+        this.hero = typeHero;
+        this.attack = typeAttack;
+    }
+
+    atacar() {
+        console.log(`O ${this.hero} atacou usando ${this.attack}`);
+    }
+}
+
+let nome = "Belmont";
+let idade = 31;
+const typeHero = ["Guerreiro", "Mago", "Monge", "Ninja"];
+const typeAttack = ["espada", "magia", "artes marciais", "shuriken"];
+
+console.log("Indique seu tipo de herói: 0 - Guerreiro, 1 - Mago, 2 - Monge, 3 - Ninja")
+console.log(".")
+let escolha1 = 0; //Varia de acordo com o personagem do usuário
+let escolha2 = 2;
+
+let i = escolha1
+let j = escolha2
+
+var tipoDeHeroi1 = new attackHero(nome, idade, typeHero[i], typeAttack[i]);
+tipoDeHeroi1.atacar();
+
+let tipoDeHeroi2 = new attackHero(nome, idade, typeHero[j], typeAttack[j]);
+tipoDeHeroi2.atacar();
+
+console.log("......")
 console.log("Desafio 2 - Calculadora de Partidas")
 let win = 100;
 let lost = 2;
@@ -23,8 +58,9 @@ function calcularPartidas (){
     console.log(`O Herói tem saldo de ${saldoVitorias} está no nível de ${categoriaNivel}`);
 }
 
+console.log("......")
 console.log("Desafio 1 - Ranking")
-let nome = "João";
+//let nome = "João";
 let xp = 100000;
 
 // Categorias de ranking e valores mínimos de XP necessários para cada uma
